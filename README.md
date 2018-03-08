@@ -17,11 +17,11 @@ docker build --rm -t msconvert .
 
 Bruker -> mzXML example:
 
-`docker run -v $HOME:/data msconvert ./Sample_4512.d -o ./ --mzXML --64 --zlib --filter "peakPicking true 1-" --filter "msLevel 1-"`
+`docker run --rm -v $HOME:/data msconvert ./Sample_4512.d -o ./ --mzXML --64 --zlib --filter "peakPicking true 1-" --filter "msLevel 1-"`
 
 Sciex -> mzXML example:
 
-`docker run -v $HOME:/data msconvert ./Sample_4512.wiff -o ./ --mzXML --64 --zlib --filter "peakPicking true 1-" --filter "msLevel 1-"`
+`docker run --rm -v $HOME:/data msconvert ./Sample_4512.wiff -o ./ --mzXML --64 --zlib --filter "peakPicking true 1-" --filter "msLevel 1-"`
 
 Replace $HOME by the name of the folder where your raw data is.
 
