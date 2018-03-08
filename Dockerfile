@@ -83,9 +83,9 @@ RUN chown xclient:xusers /data
 RUN chown xclient:xusers /
 WORKDIR /data
 
-#USER xclient
+USER xclient
 
-#ENTRYPOINT [ "wine", "/home/xclient/.wine/drive_c/Program Files/ProteoWizard/ProteoWizard/msconvert.exe" ]
+ENTRYPOINT [ "wine", "/home/xclient/.wine/drive_c/pwiz/msconvert.exe" ]
 #ENTRYPOINT [ "/bin/bash", "-c" ]
 
 #ENV DISPLAY :0
