@@ -25,6 +25,10 @@ Sciex -> mzXML example:
 
 Replace $HOME by the name of the folder where your raw data is.
 
+Thermo:
+
+Unfortunately RAW files from Thermo fail.
+
 # Acknowledgements
 
 I would like to thank the guys how did the hard work : Steffen Neumann (@sneumann) and Rene Meier (@meier-rene). 
