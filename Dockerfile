@@ -1,6 +1,7 @@
 FROM i386/debian:stretch-backports
 
-LABEL Description="Convert LC/MS or GC/MS RAW vendor files to mzML."
+LABEL description="Convert LC/MS or GC/MS RAW vendor files to mzML." \
+      maintainer="Rico Derks r.j.e.derks@lumc.nl"
 
 # first create user and group for all the X Window stuff
 # required to do this first so we have consistent uid/gid between server and client container
@@ -50,10 +51,6 @@ RUN apt-get update && \
 
 ENV WINEARCH win32
 
-#WORKDIR /root/
-#ADD waitonprocess.sh /root/waitonprocess.sh
-#RUN chmod +x waitonprocess.sh
-
 # WINE does not like running as root
 USER xclient
 WORKDIR /home/xclient
@@ -87,6 +84,3 @@ USER xclient
 
 ENTRYPOINT [ "wine", "/home/xclient/.wine/drive_c/pwiz/msconvert.exe" ]
 #ENTRYPOINT [ "/bin/bash", "-c" ]
-
-#ENV DISPLAY :0
-#CMD ["wine", "MSConvertGUI" ]

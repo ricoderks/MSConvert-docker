@@ -53,12 +53,12 @@ IFS="
 output="$2"
 for LINE in $LINES; do
 	# get the input file (in the case of Bruker this is a folder)
-    input="$(basename $LINE)"
+	input="$(basename $LINE)"
 	# Run the command on a linux machine
 	# is this smart to do, it will run x number of docker containers?
 	# there is also an option -f
 	# make sure to run docker with --rm option, to remove container when finished
-	COMMANDLIST+="docker run --rm -v $1:/data msconvert $input -o $output --mzXML --64 --zlib --filter \"peakPicking true 1-\" --filter \"msLevel 1\"
+	COMMANDLIST+="docker run --rm -v $1:/data msconvert $input -o $output --mzXML --64 --zlib --filter \"peakPicking true 1-\" --filter \"msLevel 1-\"
 	"
 done
 
