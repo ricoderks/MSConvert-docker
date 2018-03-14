@@ -60,7 +60,7 @@ for LINE in $LINES; do
 	# make sure to run docker with --rm option, to remove container when finished
 	#COMMANDLIST+="docker run --rm -v $1:/data msconvert $input -o $output --mzXML --64 --zlib --filter \"peakPicking true 1-\" --filter \"msLevel 1\"
 	#"
-	COMMANDLIST+="docker run --rm -v $1:/data msconvert $input -o $output --mzXML --32 --filter \"peakPicking true 1-\" --filter \"msLevel 1\"
+	COMMANDLIST+="docker run --rm -v $1:/data msconvert $input -o $output --mzXML --32 --filter \"peakPicking true 1-\" --filter \"msLevel 1-\"
 	"
 done
 
