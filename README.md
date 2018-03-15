@@ -10,24 +10,14 @@ cd MSConvert-docker
 
 2. Create the container image
 ```
-docker build --rm -t msconvert .
+docker build --rm -t msconvert-gui .
 ```
 
-3. To convert a file:
+3. Run the container :
 
-Bruker -> mzXML example:
-
-`docker run --rm -v $HOME:/data msconvert ./Sample_4512.d -o ./ --mzXML --64 --zlib --filter "peakPicking true 1-" --filter "msLevel 1-"`
-
-Sciex -> mzXML example:
-
-`docker run --rm -v $HOME:/data msconvert ./Sample_4512.wiff -o ./ --mzXML --64 --zlib --filter "peakPicking true 1-" --filter "msLevel 1-"`
+`docker run --rm -v /tmp/.X11-unix:/tmp/.X11-unix:rw -v $HOME:/data:rw msconvertgui`
 
 Replace $HOME by the name of the folder where your raw data is.
-
-Thermo:
-
-Unfortunately RAW files from Thermo fail.
 
 # Acknowledgements
 
