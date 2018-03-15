@@ -82,5 +82,5 @@ WORKDIR /data
 
 USER xclient
 
-ENTRYPOINT [ "wine", "/home/xclient/.wine/drive_c/pwiz/msconvert.exe" ]
-#ENTRYPOINT [ "/bin/bash", "-c" ]
+ENV DISPLAY :0
+CMD ["wine", "MSConvertGUI" ]
