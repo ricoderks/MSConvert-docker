@@ -3,12 +3,14 @@
 You need to have a installed and running docker environment and be a member of the `docker` group.
 
 1. Get this repo
+
 ```
 git clone https://github.com/ricoderks/MSConvert-docker
 cd MSConvert-docker
 ```
 
 2. Create the container image
+
 ```
 docker build --rm -t msconvert .
 ```
@@ -28,6 +30,12 @@ Replace $HOME by the name of the folder where your raw data is.
 Thermo:
 
 Unfortunately RAW files from Thermo fail.
+
+# Bash scripts
+
+There 2 bash scripts added to do multiple conversions at once. For Sciex data use as:
+
+`convert_sciex_2mzxml /use/fullpath/here ./mzXML`
 
 # Acknowledgements
 
