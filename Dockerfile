@@ -9,6 +9,8 @@ RUN addgroup --system xusers \
   && adduser \
 			--home /home/xclient \
 			--disabled-password \
+			# this is a crude solution to get it working on my computer
+                        --uid 36480 \
 			--shell /bin/bash \
 			--gecos "user for running an xclient application" \
 			--ingroup xusers \
