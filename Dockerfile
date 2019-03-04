@@ -70,7 +70,7 @@ RUN xvfb-run winetricks -q vcrun2008 dotnet452 \
 # https://teamcity.labkey.org/repository/download/bt36/538732:id/pwiz-bin-windows-x86-vc120-release-3_0_11748.tar.bz2
 RUN mkdir /home/xclient/.wine/drive_c/pwiz && \
     # wget https://teamcity.labkey.org/repository/download/bt36/538732:id/pwiz-bin-windows-x86-vc120-release-3_0_11748.tar.bz2?guest=1 -qO- | \
-    wget https://teamcity.labkey.org/repository/download/bt36/706593:id/pwiz-bin-windows-x86-vc141-release-3_0_19060_566331049.tar.bz2 -qO- | \
+    wget https://teamcity.labkey.org/repository/download/bt36/706593:id/pwiz-bin-windows-x86-vc141-release-3_0_19060_566331049.tar.bz2?guest=1 -qO- | \
       tar --directory=/home/xclient/.wine/drive_c/pwiz -xj
 # put C:\pwiz on the Windows search path
 ENV WINEPATH "C:\pwiz"
