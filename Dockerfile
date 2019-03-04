@@ -28,13 +28,13 @@ RUN apt-get update && \
     apt-get -y install wget gnupg && \
     echo "deb http://dl.winehq.org/wine-builds/debian/ stretch main" >> \
       /etc/apt/sources.list.d/winehq.list && \
-    #wget http://dl.winehq.org/wine-builds/Release.key -qO- | apt-key add - && \
     wget -nc https://dl.winehq.org/wine-builds/winehq.key && \
     apt-key add winehq.key && \
     apt-get update && \
     apt-get -y --install-recommends install \
       bzip2 \
-      winehq-stable=3.0* \
+      #winehq-stable=3.0* \
+      winehq-stable \
       winbind \
       xvfb \
       cabextract \
