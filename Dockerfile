@@ -30,7 +30,7 @@ RUN apt-get update && \
       /etc/apt/sources.list.d/winehq.list && \
     #wget http://dl.winehq.org/wine-builds/Release.key -qO- | apt-key add - && \
     wget -nc https://dl.winehq.org/wine-builds/winehq.key && \
-    apt-key add winehq.key
+    apt-key add winehq.key && \
     apt-get update && \
     apt-get -y --install-recommends install \
       bzip2 \
