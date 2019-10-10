@@ -39,4 +39,4 @@ There 2 bash scripts added to do multiple conversions at once. For Sciex data us
 
 # Acknowledgements
 
-I would like to thank the guys how did the hard work : Steffen Neumann (@sneumann) and Rene Meier (@meier-rene). 
+I would like to thank the guys who did the hard work : Steffen Neumann (@sneumann) and Rene Meier (@meier-rene). 
