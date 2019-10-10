@@ -56,7 +56,7 @@ for LINE in $LINES; do
     input="$(basename $LINE)"
 	# Run the command on a linux machine
 	# make sure to run docker with --rm option, to remove container when finished
-	COMMANDLIST+="docker run --rm -v $1:/data chambm/pwiz-skyline-i-agree-to-the-vendor-licenses wine msconvert $input -o $output --mzXML --filter \"peakPicking true 1-\" --filter \"msLevel 1-\"
+	COMMANDLIST+="docker run --rm -v $1:/data chambm/pwiz-skyline-i-agree-to-the-vendor-licenses wine msconvert $input -o $output --mzML --filter \"peakPicking true 1-\" --filter \"msLevel 1-\"
 	"
 done
 
